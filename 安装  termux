@@ -1,0 +1,42 @@
+
+安装  termux
+
+https://github.com/termux/termux-app/releases
+
+
+
+安装 CloudflareSpeedTest
+
+打开 Termux，输入以下命令安装依赖
+pkg update && pkg install wget tar
+输入以下命令，下载优选程序文件并解压
+wget -N https://github.com/XIU2/CloudflareSpeedTest/releases/latest/download/CloudflareST_linux_arm64.tar.gz
+tar -xzvf CloudflareST_linux_arm64.tar.gz
+chmod +x CloudflareST
+部分老旧安卓设备的处理器架构不一样，请根据对应的系统进行从 Releases 获取对应优选程序的下载链接及文件名 （查询命令：uname -m）
+
+输入以下命令，运行优选程序
+./CloudflareST
+稍等1-3分钟，待优选IP出来之后，可以看到下面的优选IP是由快到慢排列的。复制任意一个出来使用就行
+
+来源：https://www.nodeseek.com/post-13954-1
+
+
+Termux一键下载运行指令:
+
+curl -sSL -o ~/GeoLite2-Country.mmdb https://raw.githubusercontent.com/zjccc1999/Cf-fdip/main/linux/GeoLite2-Country.mmdb && chmod +x ~/GeoLite2-Country.mmdb
+
+curl -sSL -o ~/zjccc.sh https://raw.githubusercontent.com/zjccc1999/Cf-fdip/main/linux/zjccc.sh && chmod +x ~/zjccc.sh && bash ~/zjccc.sh
+
+来源 ：https://github.com/qxmao/Cf-fdip?tab=readme-ov-file
+
+
+
+
+
+参考来源：https://github.com/XIU2/CloudflareSpeedTest/discussions/61
+
+
+
+本地虚拟机ubuntu定时优选cloudflare id绑定到域名
+https://github.com/hy817120/cfdnschange
